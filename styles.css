@@ -1,0 +1,65 @@
+.big {
+    height:500px;
+}
+
+.small {
+    height:300px;
+}
+
+ul {
+     margin: 15px;
+}
+
+#triviago {
+    background-color:darkblue;
+    border:none;
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/font-size*/
+    font-size:20px;
+}
+
+* {
+    /*https://www.w3schools.com/css/css_font.asp*/
+    font-family:verdana;
+}
+
+/*https://www.w3schools.com/howto/howto_css_image_center.asp*/
+.intro,.col {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align:center;
+}
+
+h1.intro {
+    margin-top:15px;
+    margin-bottom:12px;
+}
+
+li,p{
+    font-size:15px;
+}
+
+#home {
+    background-color:Azure;
+}
+
+#trivhome {
+    background-color:WhiteSmoke;
+}
+
+#wvhome {
+    background-color:MistyRose;
+}
+
+#tfawshome {
+    background-color:AliceBlue;
+}
+
+#lokihome {
+    background-color:PaleGreen;
+}
+
+.triv {
+    background-color:LightSteelBlue;
+}

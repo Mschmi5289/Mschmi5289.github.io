@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+
+                document.addEventListener('DOMContentLoaded', function() {
+
+                    let correct = document.querySelector('#correct');
+                    document.querySelector('#correct').addEventListener('click', function() {
+                        correct.style.backgroundColor = 'green';
+                        document.querySelector('#feedback1').innerHTML = 'Correct!';
+                        });
+
+                    let wrongs = document.querySelectorAll('.wrong');
+                    for (let i = 0; i < wrongs.length; i++) {
+                        wrongs[i].addEventListener('click', function() {
+                            wrongs[i].style.backgroundColor = 'red';
+                            document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                            });
+                    }
+                    
+                    document.querySelector('#check2').addEventListener('click', function() {
+                        let input2 = document.querySelector('#input2');
+                        // === will check not just the value matching, as does ==, but also the type matching
+                        if (input2.value === 'John Walker') {
+                            input2.style.backgroundColor = 'green';
+                            document.querySelector('#feedback2').innerHTML = 'Correct!';
+                        }
+                        else {
+                            input2.style.backgroundColor = 'red';
+                            document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                        }
+                        });
+                        
+                    document.querySelector('#check3').addEventListener('click', function() {
+                        let input3 = document.querySelector('#input3');
+                        // === will check not just the value matching, as does ==, but also the type matching
+                        if (input3.value === 'frost giant') {
+                            input3.style.backgroundColor = 'green';
+                            document.querySelector('#feedback3').innerHTML = 'Correct!';
+                        }
+                        else {
+                            input3.style.backgroundColor = 'red';
+                            document.querySelector('#feedback3').innerHTML = 'Incorrect!';
+                        }
+                        });
+                    
+                    document.querySelector('#check4').addEventListener('click', function() {
+                        if (input3.value === 'frost giant' && input2.value === 'John Walker' && correct.style.backgroundColor === 'green') {
+                            alert('You are MARVELOUS!');
+                        }
+                        else {
+                            alert('Keep trying until you get all the correct answers!');
+                        }
+                        });
+
+                });
+
+        </script>
+
+    </head>
+    <body id="trivhome">
+
+        <div class="container">
+            <br>
+            <h1>Trivia!</h1>
+            <br>
+            <div class="section">
+                <h2>Part 1: Wandavision </h2>
+                <hr>
+
+                <h3>How many kids do Wanda and Vision have?</h3>
+                <button class="wrong">0</button>
+                <button class="wrong">1</button>
+                <button id="correct">2</button>
+                <button class="wrong">3</button>
+
+                <p id = "feedback1"></p>
+
+            </div>
+            <br>
+            <div class="section">
+                <h2>Part 2: The Falcon and the Winter Soldier</h2>
+                <hr>
+                <h3>What is the full name of the new Captain America shown at the end of Episode 1?</h3>
+                <input id="input2" type="text">
+                <button id="check2" class="triv">Check Answer</button>
+                <p id = "feedback2"></p>
+
+            </div>
+            <br>
+            <div class="section">
+                <h2>Part 3: Loki</h2>
+                <hr>
+                <h3>Loki is not originally Asgardian. He instead was born a _____.</h3>
+                <input id="input3" type="text">
+                <button id="check3" class="triv">Check Answer</button>
+                <p id = "feedback3"></p>
+
+            </div>
+            <br>
+            <div class="section">
+                <button id="check4" class="triv">Done!</button>
+            </div>
+            <br>
+            <br>
+            <div class="section">
+                <a class="btn btn-primary" href="index.html" role="button">Return to the Home Page!</a>
+            </div>
+
+        </div>
+    </body>
+</html>
